@@ -10,4 +10,9 @@ include_directories(${LIBUSB_1_INCLUDE_DIRS})
 
 set(SOURCE_FILES main.cpp)
 add_executable(lguf_brightness ${SOURCE_FILES})
-target_link_libraries(lguf_brightness ${LIBUSB_1_LIBRARIES} curses)
+target_link_libraries(lguf_brightness ${LIBUSB_1_LIBRARIES} ncurses)
+
+install(
+    TARGETS lguf_brightness
+    EXPORT ${PROJECT_NAME}_Targets
+    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
