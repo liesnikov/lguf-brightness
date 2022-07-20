@@ -19,3 +19,19 @@ In order to compile this project, you will need `g++`, `cmake`, `libusb-1.0-0-de
 ### In order to run this program, you need administrator privileges
 
 `sudo ./lguf_brightness`
+
+
+### Using nix
+
+* To build
+  ```
+  nix-build
+  ```
+* To run after build
+  ```
+  sudo ./result/bin/lguf_brightness
+  ```
+* To drop in a shell with all build dependencies
+  ```
+  nix-shell
+  ```
